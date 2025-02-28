@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iphone</title>
+
+  <style>
+
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body{
+      background-color: white;
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+
+    .p1{
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      display: none;
+    }
+
+    .p1 .head{
+      background: url('phoneImages/ap4.jpeg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: rgb(255, 255, 255);
+      height: 40vh;
+    }
+
+    
+
+    .icon svg{
+      height: 25px;
+      fill: white;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    .icon svg:hover{
+      opacity: 0.8
+    }
+
+    .p1 h2{
+      font-size: 18px;
+      text-align: center;
+      position: relative;
+      top: 40px;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 100px;
+      border: 3px solid rgb(0, 255, 55);
+      padding: 10px;
+      border-radius: 20px;
+      font-weight: bolder;
+    }
+
+
+    .p1 .intro-pra{
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-weight: bold;
+    }
+
+
+    .p1 .intro-pra-line{
+      background-color: rgb(0, 255, 21);
+      height: 4px;
+      width: 80%;
+      margin: auto;
+      border-radius: 20px;
+    }
+
+
+    .p1 .phones .line-of-intro-phones{
+      background-color: rgb(41, 129, 41);
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .p1 .phones .line-of-intro-phones li{
+      list-style: none;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      padding: 5px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+
+    .p1 .phones .line-of-intro-phones li:hover{
+      background-color: rgb(21, 172, 78);
+      transition: 0.5s;
+      box-shadow: 0px 0px 5px 0px;
+    }
+
+
+    .phones{
+      background-color: rgb(30, 187, 192);
+    }
+
+
+    .each-phones{
+      display: grid;
+      grid-template-columns: 45% 45%;
+      width: 100%;
+      margin: auto;
+      background-color: rgb(255, 255, 255);
+      gap: 25px;
+      text-align: center;    
+    }
+
+    .phone{
+      width: 95%;
+      margin: auto;
+      margin-top: 5px;
+      padding: 4px;
+      background-color: rgba(0, 255, 157, 0.623);
+      box-shadow: 0px 0px 2px 1px green;
+      border-radius: 5px;
+    }
+
+
+    .each-phones img{
+      height: 100px;
+      border-radius: 10px;
+      width: 100px;
+    }
+
+    .each-phones .name, .price{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      text-align: center;
+      padding: 3px;
+    }
+
+    .each-phones button{
+      height: 30px;
+      width: 60px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      background-color: rgb(11, 165, 11);
+      color: white;
+      cursor: pointer;
+    }
+
+    .each-phones button:hover{
+      background-color: green;
+    }
+
+
+    .bar-page{
+      height: 99vh;
+      background-color: rgba(0, 128, 0, 0.63);
+      width: 95%;
+      box-shadow: 0px 0px 4px 0px;
+      border-radius: 0px 10px 10px 0px;
+      transition: 1s;
+      position: absolute;
+      left: 0px;
+      display: none;
+    }
+
+
+
+    .item-page{
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 45% 55%;
+      background-color: chocolate;
+      display: none;
+      overflow: hidden;
+    }
+
+
+    ::-webkit-scrollbar{
+      background-color: rgb(84, 252, 7);
+      width: 2px;
+      height: 0px;
+    }
+
+    .item-main{
+      background-color: rgb(255, 255, 255);
+      height: 100vh;
+      border-top: 2px solid black;
+      margin-top: 5px;
+      overflow: scroll;
+    }
+
+
+    .item-main .each-phones{
+      background-color: rgb(0, 0, 0);
+      padding: 10px;
+    }
+
+
+    .item-main .each-phones .phone{
+      background-color: rgb(0, 45, 245);
+      box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
+      color: white;
+    }
+
+
+    .item-main .each-phones .phone img{
+      width: 100px;
+    }
+
+
+
+
+    .item{
+      width: 100%;
+      background: linear-gradient(to top, rgb(8, 235, 46), blue);
+      box-shadow: 0px 0px 5px 3px;
+      overflow: hidden;    
+    }
+
+    .item .phone{
+      text-align: center;
+      width: 80%;
+      height: 200px;
+      background: url(./phoneImages/ap4.jpeg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: rgb(0, 255, 106);
+      margin-top: 15px;
+      box-shadow: 0px 0px 12px 1px white;
+    }
+
+
+    .item .phone img{
+      height: 100px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 15px 0px black;
+      animation: rotate 0.5s linear ;
+    }
+       @keyframes rotate {
+          0% { transform: rotateZ(0deg); scale: 3; }
+          20%{   }
+          100% { transform: rotateZ(360deg);  }
+        }
+
+
+        
+    .item .phone .name{
+      font-family: sans-serif;
+      font-weight: bolder;
+      border-bottom: 1px solid black;
+      width: 20%;
+      margin: auto;
+    }
+
+    .item .phone button{
+      padding: 10px;
+      width: 100px;
+      border: none;
+      background-color: rgba(2, 225, 255, 0.842);
+      color: rgb(0, 0, 0);
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    .item .phone button:hover{
+      background-color: rgba(5, 220, 250, 0.596);
+    }
+
+    .item svg{
+      height: 25px;
+      position: absolute;
+      padding: 5px;
+      fill: white;
+      cursor: pointer;
+    }    
+    .item svg:hover{
+      opacity: 0.7;
+    }
+
+
+    .buy-page{
+      background-color: rgb(255, 255, 255);
+      height: 100px;
+     width: 80%;
+     margin: auto;
+     box-shadow: 0px 0px 20px 1px;
+     position: relative;
+     top: -150px;
+     text-align: center;
+     padding: 10px;
+     font-family: sans-serif;
+     font-weight: bold;
+     border: 5px solid rgb(0, 255, 0);
+     border-radius: 10px;
+     display: none;
+    }
+
+    .ins-buy-page p{
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .ins-buy-page button{
+      padding: 5px;
+      width: 80px;
+      border: none;
+      background-color: rgb(14, 148, 66);
+      font-weight: bolder;
+      color: white;
+      cursor: pointer;
+    }
+
+
+    .ins-buy-page .yes:hover{
+        background-color: greenyellow;
+        color: black;
+    }
+
+    .ins-buy-page .no:hover{
+      background-color: red;
+      color: black;
+    }
+
+
+
+
+
+    .buy-result{
+     background-color: rgb(255, 255, 255);
+     height: 100px;
+     width: 80%;
+     margin: auto;
+     box-shadow: 0px 0px 20px 1px;
+     position: relative;
+     top: -150px;
+     text-align: center;
+     padding: 10px;
+     font-family: sans-serif;
+     font-weight: bold;
+     border: 5px solid rgb(0, 255, 0);
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: none;
+    }
+
+    .buy-result .animation-buy-result{
+      height: 80px;
+      width: 80px;
+      background-color: rgb(56, 4, 4);
+      border-radius: 100%;
+      box-shadow: 0px 0px 10px 10px green;
+      animation: animationResult 1.5s linear infinite;
+      margin-left: 45%;
+      margin-top: 13%;
+    }
+
+    @keyframes animationResult{
+      0%{
+        height: 20px;
+        width: 20px;
+        transform: rotateZ(90deg);
+      }
+      50%{
+        height: 40px;
+        width: 40px;
+        transform: rotateZ(180deg);
+      }
+
+      100%{
+        height: 20%;
+        width: 20px;
+        transform: rotateZ(360deg);
+      }
+    }
+
+    .buy-result .dot{
+      height: 10px;
+      width: 10px;
+      background-color: aliceblue;
+      border-radius: 100%;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    .buy-result p{
+      margin-top: 40px;
+      font-size: 15px;
+      font-weight: bolder;
+      color: green;
+      display: none;
+    }
+
+    .solve{
+      display: none;
+    }
+ 
+
+    .list{
+      margin-top: 25px;
+      margin-left: 10px;
+      padding: 20px;
+    }
+
+
+    .list-item{
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+      border-bottom: 1px solid black;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .list-item svg{
+      height: 25px;
+      fill: black;
+    }
+
+    .list-item p{
+      font-family: sans-serif;
+      font-weight: bold;
+      line-height: 2;
+    }
+
+    .list-item:hover{
+      background-color: greenyellow;
+    }
+
+
+
+
+    .my-phones-page{
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: none;
+    }
+
+
+    .ins-my-phones-page{
+      width: 99%;
+      box-sizing: border-box;
+    }
+
+    .ins-my-phones-page .head{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-shadow: 0px 0px 6px 0px;
+    }
+
+    .ins-my-phones-page .head svg{
+      height: 25px;
+      fill: green;
+      cursor: pointer;
+    }
+    .ins-my-phones-page .head svg:hover{
+      opacity: 0.8;
+    }
+
+
+    .ins-my-phones-page .head p{
+      color: green;
+      font-weight: bolder;
+      font-family: sans-serif;
+      line-height: 5;
+      border-bottom: 1px solid;
+      margin-top: 120px;
+      display: none;
+    }
+
+    .ins-my-phones-page .main{
+      height: 86vh;
+      overflow: scroll;
+      padding: 10px;
+
+    }
+
+
+    .ins-my-phones-page .main .items{
+      height: 80px;
+      background-color: rgb(63, 100, 8);
+      display: grid;
+      grid-template-columns: 30% 20% 30%;
+      font-family: sans-serif;
+      gap: 20px;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    .ins-my-phones-page .main .items img{
+      height: 80px;
+      width: 80px;
+      border-radius: 10px;
+      animation: bodbod 1s linear;
+    }
+    @keyframes bodbod{
+      0%{
+       margin-top: -5px;   
+       height: 50px;
+       width: 30px;   
+       scale: -2;
+      }
+      50%{
+        margin-top: -30px;
+        width: 60px;
+      }
+
+      100%{
+        margin: 0px;
+        height: 80px;
+        width: 80px;
+        transform: rotate(360deg);
+      }
+    }
+
+
+    .ins-my-phones-page .main .items p{
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 2;
+      border-bottom: 1px solid;
+      margin-top: 30px;
+    }
+    .ins-my-phones-page .main .items  button{
+      padding: 10px;
+      width: 80px;
+      margin-top: 25px;
+      border: none;
+      background-color: rgb(8, 71, 50);
+      color: aliceblue;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      box-shadow: 0px 0px 3px 0px rgb(79, 228, 79);
+      cursor: pointer;
+    }
+
+    .ins-my-phones-page .main .items  button:hover{
+      opacity: 0.8;
+    }
+
+
+    .intro-use-page{
+      position: absolute;
+      background-color: rgb(10, 139, 38);
+      top: 100px;
+     padding: 10px;
+     text-align: center;
+     left: 20px;
+     color: white;
+     border-radius: 10px;
+     display: none;
+    }
+
+
+    .intro-use-page p{
+      font-family: sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+
+    .intro-use-page button{
+      padding: 6px;
+      width: 70px;
+      cursor: pointer;
+      background-color: white;
+      border: none;
+    }
+
+    .intro-use-page .yes-use:hover{
+      background-color: greenyellow;
+    }
+
+    .intro-use-page .no-use:hover{
+      background-color: red;
+    }
+
+
+    .use-phone-page{
+      /* display: none; */
+    }
+
+
+    .p1-of-use-phone{
+      height: 100vh;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 45% 55%;
+     
+    }
+
+    .head-p1-use-phone{
+      border: 1px solid rgb(214, 213, 213);
+      background: url(./AdobeStock_531539942_Preview.jpeg);
+      background-position: center;
+      background-size: cover;
+      color: white;
+      /* display: none; */
+    }
+
+    .head-p1-use-phone .screen{
+     width: 99%;
+     margin: auto;
+     text-align: center;
+    }
+
+    .head-p1-use-phone .screen .head{
+      display: flex;
+      justify-content: start;
+      gap: 20px;
+      padding: 3px;
+    }
+
+    .head-p1-use-phone .screen .head svg{
+      height: 15px;
+      fill: white;
+    }
+
+
+    .head-p1-use-phone .screen .main{
+      margin-top: 50px;
+      padding: 10px;
+      font-weight: bolder;
+      line-height: 2;
+      letter-spacing: 1px;
+      font-size: 20px
+    }
+
+
+    .main-p1-use-phone{
+      border: 1px solid rgb(208, 209, 208);
+      padding: 10px;
+      background-color: rgb(54, 54, 54);
+      position: relative;
+    }
+
+    .main-p1-use-phone .main-buttons{
+      width: 100%;
+      margin: auto;
+     
+    }
+
+
+    .main-p1-use-phone .main-buttons .head-buttons{
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      gap: 20px;
+    }
+
+
+    .main-p1-use-phone .main-buttons .head-buttons svg{
+      height: 20px;
+      background-color: black;
+      fill: rgb(9, 190, 9);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .main-p1-use-phone .main-buttons .head-buttons svg:hover{
+      background-color: rgba(0, 0, 0, 0.685);
+    }
+
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button{
+      height: 80px;
+      background-color: rgb(0, 0, 0);
+      border-radius: 30%;
+      border: 2px solid black;
+      position: relative;    
+      left: -15px;  
+    }
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .top-button{
+      height: 20px;
+      background-color: black;
+      border-radius: 100px 100px 0px 0px;
+      box-shadow: 0px 0px 3px 0px;
+   }
+  
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .bottom-button{
+      height: 20px;
+      background-color: rgb(5, 0, 0);
+      border-radius: 0px 0px 100px 100px;
+      box-shadow: 0px 0px 3px 0px;
+      position: relative;
+      bottom: -50%;
+    }
+
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .left-button{
+      height: 20px;
+      background-color: rgb(5, 0, 0);
+      border-radius: 0px 0px 100px 100px;
+      box-shadow: 0px 0px 3px 0px;
+      position: relative;
+      left: -11%;
+      top: -7px;
+      width: 50px;
+      transform: rotate(270deg);
+    }
+
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .right-button{
+      height: 20px;
+      background-color: rgb(5, 0, 0);
+      border-radius: 0px 0px 100px 100px;
+      box-shadow: 0px 0px 3px 0px;
+      position: relative;
+      right: -76%;
+      top: -28px;
+      width: 50px;
+      transform: rotate(90deg);
+    }
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .button{
+      cursor: pointer;
+    }
+
+    .main-p1-use-phone .main-buttons .head-buttons .middle-button .button:hover{
+      background-color: rgb(51, 50, 50);
+    }
+
+
+
+    .nums{
+      background-color: rgba(0, 0, 0, 0.514);
+      padding: 5px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;     
+      height: 35vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .number-buttons .num{
+      background-color: rgb(0, 0, 0);
+      padding: 0px;
+      margin: 1px;
+      color: white;
+      font-family: monospace;
+      font-weight: bold;
+      box-shadow: 0px 0px 1px 0px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .number-buttons .num:hover{
+      opacity: 0.7;
+    }
+
+
+    .log-out{
+      background-color: aqua;
+      height: 80px;
+      width: 100px;
+      position: absolute;
+      right: 10px;
+      top: -80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      animation: logOutAnim 0.5s linear;
+      display: none;
+    }
+
+    .log-out p{
+      background-color: green;
+      color: white;
+       font-weight: bold;
+       cursor: pointer;
+       padding: 10px;
+    }
+
+
+    @keyframes logOutAnim {
+      0%{
+        top: -10PX;
+        opacity: 0.2;
+      }
+      30%{
+        top: -50px;
+        opacity: 0.5;
+      }
+      100%{
+        top: -80px;
+        opacity: 1;
+      }
+    }
+
+
+
+    .h2-p1-use-phone{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      display: none;
+    }
+
+    .h2-p1-use-phone .screen{
+      display: grid;
+      grid-template-columns:  45% 45%;
+      gap: 10px;
+      width: 90%;
+      margin: auto;
+      padding: 30px;
+      margin-top: -15px;
+      text-align: center;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .h2-p1-use-phone .screen svg{
+      height: 40px;
+      fill: rgb(30, 143, 30);
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 10px;
+   }
+
+   .h2-p1-use-phone .screen svg:hover{
+    box-shadow: 0px 0px 5px 3px;
+   }
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+
+
+  
+  <div class="p1">
+
+
+    <div class="icon">
+      <svg class="show-bar-page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+    </div>
+
+    <div class="head">
+        <h2>Welcome to iphone's World</h2>
+        <p class="intro-pra">Use multiple phones inside one phone</p>
+        <div class="intro-pra-line"></div>
+    </div>
+
+    <div class="phones">
+
+      <div class="line-of-intro-phones">
+        <li>All</li>
+        <li>Tecno</li>
+        <li>Samsung</li>
+        <li>Huwai</li>
+        <li class="more">More..</li>
+      </div>
+    
+      <div class="each-phones each-phones-page-one">
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="bar-page">
+
+
+    <div class="icon">
+      <svg class="hide-bar-page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+    </div>
+
+    <div class="list">
+
+      <div class="list-item my-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+        <p>My Phones</p>
+      </div>
+
+      <div class="list-item my-phone shopping">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+        <p>Shopping</p>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="item-page">
+
+    <div class="item">
+
+      <svg class="hide-item-page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+
+      <div class="phone">
+        <img src="phoneImages/phone4.jpeg" alt="Tecno">
+        <div class="texts">
+          <p class="name">Tecno</p>
+          <p class="price">10.00</p>
+        </div>
+         <button class="buy-item-btn">Buy</button>
+      </div>
+
+      <div class="buy-page">
+        <div class="ins-buy-page">
+          <p>You Sure you want to buy this phone</p>
+          <!-- <input class="solve" type="text" placeholder="Do you want buy agian?"> -->
+          <button class="yes">Yes</button>
+          <button class="no">No</button>
+        </div>
+      </div>
+
+      <div class="buy-result">
+        <div class="animation-buy-result">
+          <div class="dot"></div>
+        </div>
+        <p class="Successful">
+          ✔ <br><br>
+          Successful</p>
+      </div>
+
+
+    </div>
+
+    <div class="item-main">
+
+      <div class="each-phones">
+
+        <div class="phone">
+          <img src="phoneImages/phone4.jpeg" alt="Tecno">
+          <div class="texts">
+            <p class="name">Tecno</p>
+            <p class="price">10.00</p>
+           </div>
+           <button class="buy">Buy</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+ 
+<div class="my-phones-page">
+
+  <div class="ins-my-phones-page">
+
+    <div class="head">
+      <div>
+        <svg class="hide-my-phones-page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+      </div>
+      <div>
+        <p class="not-have-text">You Have not any phone yet</p>
+      </div>
+      <div>
+        <svg class="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+      </div>
+    </div>
+
+
+    
+    <div class="main">
+
+          <div class="items">
+            <div class="image">
+              <img src="./phoneImages/phone4.jpeg" alt="">
+            </div>
+            <div class="name">
+              <p>Tecno</p>
+            </div>
+            <div class="use-btn">
+              <button class="use-phone-btn">Use</button>
+            </div>
+          </div>
+
+      </div>
+
+
+      <div class="intro-use-page">
+        <p>You're goin to start using this phone <br> you sure to continue?</p><br>
+        <button class="yes-use">YES</button>
+        <button class="no-use">NO</button>
+      </div>
+  
+
+  </div>
+
+</div>
+
+
+
+
+<div class="use-phone-page">
+
+
+  <div class="p1-of-use-phone">
+
+    <div class="head-p1-use-phone">
+        <div class="screen">
+
+          <div class="head">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416l384 0c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8l0-18.8c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M576 0c17.7 0 32 14.3 32 32l0 448c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-448c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32l0 352c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-352c0-17.7 14.3-32 32-32zM352 224l0 256c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32zM96 416l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M639.8 298.6c-1.3 23.1-11.5 44.8-28.4 60.5s-39.2 24.4-62.3 24.1h-218c-4.8 0-9.4-2-12.8-5.4s-5.3-8-5.3-12.8V130.2c-.2-4 .9-8 3.1-11.4s5.3-6.1 9-7.7c0 0 20.1-13.9 62.3-13.9c25.8 0 51.1 6.9 73.3 20.1c17.3 10.2 32.3 23.8 44.1 40.1s20 34.8 24.2 54.4c7.5-2.1 15.3-3.2 23.1-3.2c11.7-.1 23.3 2.2 34.2 6.7S606.8 226.6 615 235s14.6 18.3 18.9 29.3s6.3 22.6 5.9 34.3zm-354-153.5c.1-1 0-2-.3-2.9s-.8-1.8-1.5-2.6s-1.5-1.3-2.4-1.7s-1.9-.6-2.9-.6s-2 .2-2.9 .6s-1.7 1-2.4 1.7s-1.2 1.6-1.5 2.6s-.4 1.9-.3 2.9c-6 78.9-10.6 152.9 0 231.6c.2 1.7 1 3.3 2.3 4.5s3 1.8 4.7 1.8s3.4-.6 4.7-1.8s2.1-2.8 2.3-4.5c11.3-79.4 6.6-152 0-231.6zm-44 27.3c-.2-1.8-1.1-3.5-2.4-4.7s-3.1-1.9-5-1.9s-3.6 .7-5 1.9s-2.2 2.9-2.4 4.7c-7.9 67.9-7.9 136.5 0 204.4c.3 1.8 1.2 3.4 2.5 4.5s3.1 1.8 4.8 1.8s3.5-.6 4.8-1.8s2.2-2.8 2.5-4.5c8.8-67.8 8.8-136.5 .1-204.4zm-44.3-6.9c-.2-1.8-1-3.4-2.3-4.6s-3-1.8-4.8-1.8s-3.5 .7-4.8 1.8s-2.1 2.8-2.3 4.6c-6.7 72-10.2 139.3 0 211.1c0 1.9 .7 3.7 2.1 5s3.1 2.1 5 2.1s3.7-.7 5-2.1s2.1-3.1 2.1-5c10.5-72.8 7.3-138.2 .1-211.1zm-44 20.6c0-1.9-.8-3.8-2.1-5.2s-3.2-2.1-5.2-2.1s-3.8 .8-5.2 2.1s-2.1 3.2-2.1 5.2c-8.1 63.3-8.1 127.5 0 190.8c.2 1.8 1 3.4 2.4 4.6s3.1 1.9 4.8 1.9s3.5-.7 4.8-1.9s2.2-2.8 2.4-4.6c8.8-63.3 8.9-127.5 .3-190.8zM109 233.7c0-1.9-.8-3.8-2.1-5.1s-3.2-2.1-5.1-2.1s-3.8 .8-5.1 2.1s-2.1 3.2-2.1 5.1c-10.5 49.2-5.5 93.9 .4 143.6c.3 1.6 1.1 3.1 2.3 4.2s2.8 1.7 4.5 1.7s3.2-.6 4.5-1.7s2.1-2.5 2.3-4.2c6.6-50.4 11.6-94.1 .4-143.6zm-44.1-7.5c-.2-1.8-1.1-3.5-2.4-4.8s-3.2-1.9-5-1.9s-3.6 .7-5 1.9s-2.2 2.9-2.4 4.8c-9.3 50.2-6.2 94.4 .3 144.5c.7 7.6 13.6 7.5 14.4 0c7.2-50.9 10.5-93.8 .3-144.5zM20.3 250.8c-.2-1.8-1.1-3.5-2.4-4.8s-3.2-1.9-5-1.9s-3.6 .7-5 1.9s-2.3 2.9-2.4 4.8c-8.5 33.7-5.9 61.6 .6 95.4c.2 1.7 1 3.3 2.3 4.4s2.9 1.8 4.7 1.8s3.4-.6 4.7-1.8s2.1-2.7 2.3-4.4c7.5-34.5 11.2-61.8 .4-95.4z"/></svg>
+          </div>
+
+          <div class="main">
+            <p class="time">12:00pm</p>
+            <!-- <p class="date">27-feb-25</p> -->
+          </div>
+
+        </div>
+    </div>
+
+    <div class="h2-p1-use-phone">
+
+      <div class="screen">
+
+        <div class="contact">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M528 160l0 256c0 8.8-7.2 16-16 16l-192 0c0-44.2-35.8-80-80-80l-64 0c-44.2 0-80 35.8-80 80l-32 0c-8.8 0-16-7.2-16-16l0-256 480 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0z"/></svg>
+          <p>Contact</p>
+        </div>
+
+        <div class="messages">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c0 0 0 0 0 0s0 0 0 0s0 0 0 0c0 0 0 0 0 0l.3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/></svg>
+          <p>Messages</p>
+        </div>
+
+        <div class="calculator">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg>
+          <p>Calculator</p>
+        </div>
+
+        <div class="todo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM80 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L80 96c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm54.2 253.8c-6.1 20.3-24.8 34.2-46 34.2L80 416c-8.8 0-16-7.2-16-16s7.2-16 16-16l8.2 0c7.1 0 13.3-4.6 15.3-11.4l14.9-49.5c3.4-11.3 13.8-19.1 25.6-19.1s22.2 7.7 25.6 19.1l11.6 38.6c7.4-6.2 16.8-9.7 26.8-9.7c15.9 0 30.4 9 37.5 23.2l4.4 8.8 54.1 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-6.1 0-11.6-3.4-14.3-8.8l-8.8-17.7c-1.7-3.4-5.1-5.5-8.8-5.5s-7.2 2.1-8.8 5.5l-8.8 17.7c-2.9 5.9-9.2 9.4-15.7 8.8s-12.1-5.1-13.9-11.3L144 349l-9.8 32.8z"/></svg>
+          <p>To-Do List</p>
+        </div>
+
+        <div class="gallery">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l96 0 32 0 208 0c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+          <p>Gallery</p>
+        </div>
+
+        <div class="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416l384 0c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8l0-18.8c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
+          <p>Alert</p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+    <div class="main-p1-use-phone">
+
+      <div class="main-buttons">
+
+        <div class="head-buttons">
+
+          <div>
+            <svg class="next-use-page" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+          </div>
+
+          <div>
+            <div class="middle-button">
+              <div class="top-button button"></div>
+              <div class="bottom-button button"></div>
+              <div class="left-button button"></div>
+              <div class="right-button button"></div>
+            </div>
+          </div>
+
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>          
+            <svg class="out-of-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+          </div>
+          </div>
+
+      <div class="log-out">
+        <p class="log-out-text">Log out</p>
+      </div>
+
+          <div class="number-buttons">
+            <div class="nums">
+              <div class="one num">1</div>
+              <div class="two num">2</div>
+              <div class="three num">3</div>
+              <div class="four num">4</div>
+              <div class="five num">5</div>
+              <div class="six num">6</div>
+              <div class="seven num">7</div>
+              <div class="eight num">8</div>
+              <div class="nine num">9</div>
+              <div class="0 num">*</div>
+              <div class="star num">0</div>
+              <div class="slash num">#</div>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<!----SCRIPTS-->
+
+  <script>
+
+
+
+//HANDLING ELEMENTS:
+const showBarPage = document.querySelector('.show-bar-page');
+const pageOne = document.querySelector('.p1');
+
+const barPage = document.querySelector('.bar-page');
+const hideBarPage = document.querySelector('.hide-bar-page');
+
+const itemPage = document.querySelector('.item-page');
+const hideItemPage = document.querySelector('.hide-item-page');
+
+//BUY BTN GONE TO BOTTOM AT GENERATING HTML FOR PAGE ONE;
+
+const buyItem = document.querySelector('.buy-item-btn');
+const buyMessage = document.querySelector('.buy-page');
+const yesMessage = document.querySelector('.yes');
+const noMessage = document.querySelector('.no');
+
+const buyResult = document.querySelector('.buy-result');
+const Successful = document.querySelector('.Successful');
+const animationResultBuy = document.querySelector('.animation-buy-result');
+const animationDot = document.querySelector('.dot');
+
+const solveInput = document.querySelector('.solve');
+
+const myPhonesPage = document.querySelector('.my-phones-page');
+const hideMyPhonesPage = document.querySelector('.hide-my-phones-page');
+const shoppingCart = document.querySelector('.shopping-cart');
+
+const myPhones = document.querySelector('.my-phone');
+
+const shoppingList = document.querySelector('.shopping');
+
+
+const usePhonePage = document.querySelector('.use-phone-page');
+const outUserPage = document.querySelector('.out-of-user');
+const useBtn = document.querySelector(".use-phone-btn");
+
+
+const introUsePage = document.querySelector(".intro-use-page");
+const yesUse = document.querySelector(".yes-use");
+const noUse = document.querySelector(".no-use");
+
+const logOut = document.querySelector(".log-out");
+const logOutText = document.querySelector(".log-out-text");
+
+
+const nextUsePage = document.querySelector('.next-use-page');
+const headOneUsePage = document.querySelector('.head-p1-use-phone');
+const headTwoUsagePage = document.querySelector('.h2-p1-use-phone');
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+//MAKING INTERACIVE:
+showBarPage.addEventListener('click', ()=> {
+  pageOne.style.display = 'none';
+  barPage.style.display = 'block';
+});
+
+
+
+hideBarPage.addEventListener('click', ()=> {
+  barPage.classList.add('bar-page-hide');
+  barPage.style.display = 'none';
+  pageOne.style.display = 'block';
+})
+
+
+
+
+
+
+
+//BUY BTN GONE TO BOTTOM AT GENERATING HTML FOR PAGE ONE;
+
+
+
+buyItem.addEventListener('click', ()=> {
+  buyMessage.style.display = 'block';
+})
+
+
+
+noMessage.addEventListener('click', ()=> {
+  buyMessage.style.display = 'none';
+})
+
+
+
+yesMessage.addEventListener('click', ()=> {
+    buyMessage.style.display = 'none';
+    buyResult.style.display = 'block';
+ 
+  setTimeout(()=> {
+    animationResultBuy.style.display = 'none';
+    animationDot.style.display = 'none';
+    Successful.style.display = 'block';
+  },5000);
+  
+  setTimeout(()=> {
+    animationResultBuy.style.display = 'block';
+    animationDot.style.display = 'block';
+    Successful.style.display = 'none';
+    buyResult.style.display = 'none';
+  },6000);
+
+});
+
+
+hideMyPhonesPage.addEventListener('click', ()=> {
+  myPhonesPage.style.display = 'none';
+  pageOne.style.display = 'block';
+
+});
+
+
+
+myPhones.addEventListener('click', ()=> {
+  barPage.style.display = 'none';
+  myPhonesPage.style.display = 'block';
+})
+
+
+
+
+
+let scape = '';
+
+shoppingList.addEventListener('click', ()=> {
+   scape = 'false';
+  barPage.style.display = 'none';
+  itemPage.style.display = 'block';
+
+  if(scape === 'false'){
+  
+  hideItemPage.addEventListener('click', ()=> {
+    pageOne.style.display = 'block';
+    itemPage.style.display = 'none';
+    myPhonesPage.style.display = 'none';
+  });
+  scape = '';
+
+
+} 
+})
+
+
+
+
+shoppingCart.addEventListener('click', ()=> {
+  scape = 'false';
+  myPhonesPage.style.display = 'none';
+  itemPage.style.display = 'block';
+
+  if(scape === 'false'){
+  
+  hideItemPage.addEventListener('click', ()=> {
+    myPhonesPage.style.display = 'block';
+    pageOne.style.display = 'none';
+    itemPage.style.display = 'none';
+  })
+ scape = '';
+
+
+} 
+ 
+})
+
+
+  
+  hideItemPage.addEventListener('click', ()=> {
+    scape = '';
+    if(scape === ''){
+      hideItemPage.addEventListener('click', ()=> {
+        itemPage.style.display = 'none';
+      myPhonesPage.style.display = 'none';
+      pageOne.style.display = 'block';
+      })
+
+     }
+  });
+ 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//SAVING DATA FOR PAGE ONE:
+const pageOneData = [{
+  id:'1',
+  Image : 'phoneImages/phone2.jpeg',
+  name: 'Tecno',
+  price: 1500,
+},
+{
+  id:'2',
+  Image : 'phoneImages/phone6.jpeg',
+  name: 'Nokia',
+  price: 1000,
+},
+{
+  id:'3',
+  Image : 'phoneImages/phone7.jpeg',
+  name: 'Huwai',
+  price: 5000,
+},
+{
+  id:'4',
+  Image : 'phoneImages/phone8.jpeg',
+  name: 'A03core',
+  price: 10000,
+},
+{
+  id:'5',
+  Image : 'phoneImages/phone4.jpeg',
+  name: 'Glaxy',
+  price: 8000,
+},
+{
+  id:'6',
+  Image : 'phoneImages/phone3.jpeg',
+  name: 'S-ultra',
+  price: 50000,
+},
+];
+
+
+
+//GENERATING HTML FOR PAGE ONE:
+let pageOneItemsHTML = '';
+
+pageOneData.forEach((pageOneData)=> {
+
+  pageOneItemsHTML += ` 
+      <div class="phone">
+      <img src="${pageOneData.Image}" alt="Tecno">
+      <div class="texts">
+        <p class="name">${pageOneData.name}</p>
+        <p class="price">$${(pageOneData.price /100).toFixed(2)}</p>
+      </div>
+      <button class="buy buy-btn">Buy</button>
+    </div> `;
+
+});
+
+document.querySelector('.each-phones-page-one')
+  .innerHTML = pageOneItemsHTML;
+
+
+const buyBtn = document.querySelectorAll('.buy-btn');
+
+
+  buyBtn.forEach((btn)=> {
+    btn.addEventListener('click', ()=> {
+      pageOne.style.display = 'none';
+      itemPage.style.display = 'block';
+    });
+  })
+//////////////////////////////////////////////////////////////////////////////
+
+
+useBtn.addEventListener('click', ()=> {
+  introUsePage.style.display = 'block';
+})
+
+//yes important
+yesUse.addEventListener('click', ()=> {
+  headTwoUsagePage.style.display = 'none';
+  introUsePage.style.display = 'none';
+  myPhonesPage.style.display = 'none';
+  usePhonePage.style.display = 'block';
+  headOneUsePage.style.display = 'block';
+});
+
+
+
+noUse.addEventListener("click", ()=> {
+  introUsePage.style.display = 'none';
+})
+
+let isTrue = false;
+outUserPage.addEventListener("click", ()=> {
+  if(isTrue === false){
+    logOut.style.display = 'block';
+    isTrue = true;
+
+  }else{
+    logOut.style.display = 'none';
+    isTrue = false;
+  }
+
+});
+
+
+logOutText.addEventListener('click', ()=> {
+  logOut.style.display = 'none';
+  usePhonePage.style.display = 'none';
+  myPhonesPage.style.display = 'block';
+})
+
+
+
+const time = document.querySelector(".time")
+.innerHTML = Date();
+
+
+nextUsePage.addEventListener('click', ()=> {
+  headOneUsePage.style.display = 'none'; 
+  headTwoUsagePage.style.display = 'block';
+});
+
+  </script>
+
+</body>
+
+</html>
