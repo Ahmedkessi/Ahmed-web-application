@@ -7,985 +7,629 @@
 
   <style>
 
-    *{
-      margin: 0px;
-      padding: 0px;
-    }
-
-    body{
-      background-color:aquamarine;
-      font-family: sans-serif;
-      font-size: 15px;
-    }
-
-    .p1{
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      background-color: rgba(41, 218, 100, 0.589);
-
-    }
-
-    .p1 .head{
-      background: url('phoneImages/ap4.jpeg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: rgb(255, 255, 255);
-      height: 30vh;
-    }
-
-    
-
-    .icon svg{
-      height: 30px;
-      fill: white;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      cursor: pointer;
-    }
-
-    .icon svg:hover{
-      opacity: 0.8
-    }
-
-    .p1 h2{
-      font-size: 20px;
-      text-align: center;
-      position: relative;
-      top: 25%;
-      width: 70%;
-      margin: auto;
-      margin-bottom: 5px;
-      border: 3px solid rgb(0, 255, 55);
-      padding: 20px;
-      border-radius: 10px;
-      font-weight: bolder;
-      animation: welcoming 1s linear;
-    }
-
-    @keyframes welcoming{
-      0%{
-        padding: 0px;
-        top: 10px;
-        opacity: 0.3;
-      }
-      50%{
-        padding: 10px;
-      }
-      100%{
-        padding: 15px;
-      }
-    }
-
-    .p1 .intro-pra{
-      color: rgb(255, 255, 255);
-      text-align: center;
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 16%;
-    }
-
-
-    .p1 .intro-pra-line{
-      background-color: rgb(0, 255, 21);
-      height: 4px;
-      width: 80%;
-      margin: auto;
-      border-radius: 20px;
-    }
-
-
-    .p1 .phones .line-of-intro-phones{
-      background-color: rgb(41, 129, 41);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      height: 30px;
-      font-size: 15px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500;
-    }
-
-    .p1 .phones .line-of-intro-phones li{
-      list-style: none;
-      font-weight: bold;
-      color: rgb(255, 255, 255);
-      padding: 5px;
-      cursor: pointer;
-      transition: 0.5s;
-    }
-
-
-    .p1 .phones .line-of-intro-phones li:hover{
-      background-color: rgb(21, 172, 78);
-      transition: 0.5s;
-      box-shadow: 0px 0px 5px 0px;
-    }
-
-
-    .phones{
-      height: auto;
-      background-color: aquamarine;
-    }
-
-
-    .each-phones{
-      display: grid;
-      grid-template-columns: 42% 42%;
-      justify-content: start;
-      width: 90%;
-      margin: auto;
-      padding: 10px;
-      gap: 10%;
-      text-align: center;
-    }
-
-    .phone{
-      width: 99%;
-      height: 200px;
-      margin: auto;
-      padding: 10px;
-      background-color: rgba(0, 255, 157, 0.623);
-      box-shadow: 0px 0px 12px 1px rgb(24, 29, 24);
-      border-radius: 5px; 
-    }
-
-
-    .each-phones img{
-      height: 80px;
-      border-radius: 10px;
-      width: 80px;
-    }
-
-    .each-phones .name{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .each-phones .price{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      text-align: center;
-    }
-
-    .each-phones button{
-      height: 40px;
-      width: 100px;
-      border-radius: 10px;
-      outline: none;
-      border: none;
-      background-color: rgb(11, 165, 11);
-      color: white;
-      cursor: pointer;
-      margin-top: 5px;
-    }
-
-    .each-phones button:hover{
-      background-color: green;
-    }
-
-
-    @media (max-width: 1100px) {
-      
-      .p1{
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      background-color: rgba(41, 218, 100, 0.589);
-
-    }
-
-    .p1 .head{
-      background: url('phoneImages/ap4.jpeg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: rgb(255, 255, 255);
-      height: 30vh;
-    }
-
-    
-
-    .icon svg{
-      height: 60px;
-      fill: white;
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      cursor: pointer;
-    }
-
-    .icon svg:hover{
-      opacity: 0.8
-    }
-
-    .p1 h2{
-      font-size: 60px;
-      text-align: center;
-      position: relative;
-      top: 25%;
-      width: 70%;
-      margin: auto;
-      margin-bottom: 5px;
-      border: 3px solid rgb(0, 255, 55);
-      padding: 25px;
-      border-radius: 10px;
-      font-weight: bolder;
-      animation: welcoming 1s linear;
-    }
-
-    @keyframes welcoming{
-      0%{
-        padding: 0px;
-        top: 10px;
-        opacity: 0.3;
-      }
-      50%{
-        padding: 10px;
-      }
-      100%{
-        padding: 15px;
-      }
-    }
-
-    .p1 .intro-pra{
-      color: rgb(255, 255, 255);
-      text-align: center;
-      font-weight: bold;
-      font-size: 50px;
-      margin-top: 20%;
-    }
-
-
-    .p1 .intro-pra-line{
-      background-color: rgb(0, 255, 21);
-      height: 9px;
-      width: 80%;
-      margin: auto;
-      border-radius: 20px;
-    }
-
-
-    .p1 .phones .line-of-intro-phones{
-      background-color: rgb(41, 129, 41);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      height: 70px;
-      font-size: 15px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500;
-    }
-
-    .p1 .phones .line-of-intro-phones li{
-      list-style: none;
-      font-weight: bold;
-      color: rgb(255, 255, 255);
-      padding: 20px;
-      cursor: pointer;
-      transition: 0.5s;
-      font-size: 40px;
-    }
-
-
-    .p1 .phones .line-of-intro-phones li:hover{
-      background-color: rgb(21, 172, 78);
-      transition: 0.5s;
-      box-shadow: 0px 0px 5px 0px;
-    }
-
-
-    .phones{
-      height: auto;
-      background-color: aquamarine;
-    }
-
-
-    .each-phones{
-      display: grid;
-      grid-template-columns: 42% 42%;
-      justify-content: start;
-      width: 90%;
-      margin: auto;
-      padding: 10px;
-      gap: 10%;
-      text-align: center;
-    }
-
-    .phone{
-      width: 99%;
-      height: 400px;
-      margin: auto;
-      padding: 10px;
-      background-color: rgba(0, 255, 157, 0.623);
-      box-shadow: 0px 0px 12px 1px rgb(24, 29, 24);
-      border-radius: 5px; 
-    }
-
-
-    .each-phones img{
-      height: 150px;
-      border-radius: 10px;
-      width: 180px;
-    }
-
-    .each-phones .name{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 40px;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .each-phones .price{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 40px;
-      text-align: center;
-    }
-
-    .each-phones button{
-      height: 60px;
-      font-size: 30px;
-      width: 150px;
-      border-radius: 10px;
-      outline: none;
-      border: none;
-      background-color: rgb(11, 165, 11);
-      color: white;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    .each-phones button:hover{
-      background-color: green;
-    }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    .item-page{
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: row;
-      background-color: chocolate;
-      display: none;
-      overflow: hidden;
-    }
-
-
-    ::-webkit-scrollbar{
-      background-color: rgb(84, 252, 7);
-      width: 2px;
-      height: 0px;
-    }
-
-
-
-    .item-main{
-      background-color: rgb(255, 255, 255);
-      height: 100%;
-      border-top: 2px solid black;
-      overflow: scroll;
-      background-color: rgba(0, 0, 0, 0.877);
-    }
-
-
-    .item-main .each-phones{
-      background-color: rgb(0, 0, 0);
-      padding: 10px;
-      text-align: center;
-    }
-
-
-    .item-main .each-phones .phone{
-      background-color: rgb(0, 45, 245);
-      box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      height: 200px;
-    }
-
-
-    .item-main .each-phones .phone img{
-      width: 80px;
-      height: 80px;
-    }
-
-
-    .item-main .each-phones .phone .name, .price{
-      font-size: 20px;
-      padding: 5px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .item-main .each-phones .phone button{
-      padding: 20px;
-      font-size: 15px;
-      padding: 0px;
-      text-align: center;
-    }
-
-
-    .item{
-      width: 100%;
-      background: linear-gradient(to top, rgb(8, 235, 46), blue);
-      box-shadow: 0px 0px 10px 0px black;
-      overflow: hidden; 
-      height: 40%;   
-    }
-
-    .item .phone{
-      text-align: center;
-      width: 80%;
-      height: 160px;
-      background: url(./phoneImages/ap4.jpeg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: rgb(0, 255, 106);
-      margin-top: 20px;
-      box-shadow: 0px 0px 12px 1px white;
-      border-radius: 20px;
-    }
-
-
-    .item .phone img{
-      height: 80px;
-      width: 80px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px 2px rgb(4, 250, 4);
-      animation: rotate 0.5s linear ;
-    }
-       @keyframes rotate {
-          0% { transform: rotateZ(0deg); scale: 3; }
-          20%{   }
-          100% { transform: rotateZ(360deg);  }
-        }
-
-
-        
-    .item .phone .name{
-      font-family: sans-serif;
-      font-weight: bolder;
-      font-size: 15px;
-      border-bottom: 1px solid black;
-      width: 20%;
-      margin: auto;
-      
-    }
-
-    .item .phone .price{
-      font-size: 15px;
-    }
-
-    .item .phone button{
-      padding: 10px;
-      width: 120px;    
-      border: 5px;
-      background-color: rgb(4, 54, 8);
-      color: rgb(255, 255, 255);
-      font-weight: bolder;
-      cursor: pointer;
-      font-size: 15px;
-      
-    }
-
-    .item .phone button:hover{
-      background-color: rgba(54, 250, 5, 0.507);
-    }
-
-    .item svg{
-      height: 30px;
-      position: absolute;
-      padding: 10px;
-      fill: white;
-      cursor: pointer;
-    }    
-    .item svg:hover{
-      opacity: 0.7;
-    }
-
-
-    .buy-page{
-     background-color: rgb(255, 255, 255);
-     height: 100px;
-     width: 80%;
-     position: absolute;
-     margin: auto;
-     box-shadow: 0px 0px 20px 5px;
-    margin-left: 10px;
-     top: 20%;
-     text-align: center;
-     padding: 20px;
-     font-family: sans-serif;
-     font-size: 20px;
-     font-weight: bold;
-     border: 5px solid rgb(0, 255, 0);
-     border-radius: 10px;
-     animation: buyanimation 0.5s linear;
-     display: none;
-    }
-
-    @keyframes buyanimation {
-      0%{
-        opacity: 0.3;
-        top: -300px;
-      }
-      100%{
-        opacity: 1;
-        top: -400px;
-      }
-    }
-
-
-
-    .ins-buy-page p{
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    .ins-buy-page button{
-      padding: 8px;
-      width: 70px;
-      border: none;
-      background-color: rgb(14, 148, 66);
-      font-weight: bolder;
-      color: white;
-      cursor: pointer;
-      font-size: 15px;
-      border-radius: 10px;
-    }
-
-
-    .ins-buy-page .yes:hover{
-        background-color: greenyellow;
-        color: black;
-    }
-
-    .ins-buy-page .no:hover{
-      background-color: red;
-      color: black;
-    }
-
-
-
-
-
-    .buy-result{
-    background-color: rgb(255, 255, 255);
-     height: 100px;
-     position: absolute;
-     width: 80%;
-     margin: auto;
-     box-shadow: 0px 0px 20px 5px;
-     top: 10px;
-     text-align: center;
-     padding: 20px;
-     font-family: sans-serif;
-     font-size: 15px;
-     font-weight: bold;
-     border: 5px solid rgb(0, 255, 0);
-     border-radius: 10px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     display: none;
-     top: 20%;
-     left: 2%;
-    }
-
-    .buy-result .animation-buy-result{
-      height: 80px;
-      width: 80px;
-      background-color: rgb(56, 4, 4);
-      border-radius: 100%;
-      box-shadow: 0px 0px 10px 10px green;
-      animation: animationResult 2.5s linear infinite;
-      position: absolute;
-      left:47%;
-      top:40%;
-    }
-
-    @keyframes animationResult{
-      0%{
-        height: 20px;
-        width: 20px;
-        left: 44%;
-        top: 40%;
-        transform: rotate(-360deg)
-      }
-      20%{
-        height: 40px;
-        width: 40px;
-        left: 42%;
-        top: 38%;
-        transform: rotate(-180deg);
-      }
-
-      40%{
-        height: 60px;
-        width: 60px;
-        left: 40%;
-        top: 36%;
-        transform: rotate(180deg);
-      }
-      100%{
-        height: 80px;
-        width: 80px;
-        left: 38%;
-        top: 34%;
-        transform: rotate(360deg);
-      }
-    }
-
-    .buy-result .dot{
-      height: 10px;
-      width: 10px;
-      background-color: aliceblue;
-      border-radius: 100%;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    .buy-result p{
-      margin-top: 40px;
-      font-size: 25px;
-      font-weight: bolder;
-      color: green;
-     display: none;
-    }
-
-
-    @media (max-width: 1100px) {
-      
-      .item-page{
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: row;
-      background-color: chocolate;
-      display: none;
-      overflow: hidden;
-    }
-
-
-    ::-webkit-scrollbar{
-      background-color: rgb(84, 252, 7);
-      width: 2px;
-      height: 0px;
-    }
-
-
-
-    .item-main{
-      background-color: rgb(255, 255, 255);
-      height: 100%;
-      border-top: 2px solid black;
-      overflow: scroll;
-      background-color: rgba(0, 0, 0, 0.877);
-    }
-
-
-    .item-main .each-phones{
-      background-color: rgb(0, 0, 0);
-      padding: 10px;
-      text-align: center;
-    }
-
-
-    .item-main .each-phones .phone{
-      background-color: rgb(0, 45, 245);
-      box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-    }
-
-
-    .item-main .each-phones .phone img{
-      width: 150px;
-      height: 150px;
-    }
-
-
-    .item-main .each-phones .phone .name{
-      font-size: 40px;
-      margin-top: 10px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .price{
-      font-size: 30px;
-      padding: 5px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .item-main .each-phones .phone button{
-      padding: 20px;
-      font-size: 15px;
-      padding: 0px;
-      text-align: center;
-    }
-
-
-    .item{
-      width: 100%;
-      background: linear-gradient(to top, rgb(8, 235, 46), blue);
-      box-shadow: 0px 0px 10px 0px black;
-      overflow: hidden; 
-      height: 30%;   
-    }
-
-    .item .phone{
-      text-align: center;
-      width: 80%;
-      height: 90%;
-      background: url(./phoneImages/ap4.jpeg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: rgb(0, 255, 106);
-      margin-top: 30px;
-      box-shadow: 0px 0px 12px 1px white;
-      border-radius: 20px;
-    }
-
-
-    .item .phone img{
-      height: 250px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px 2px rgb(4, 250, 4);
-      animation: rotate 0.5s linear ;
-    }
-       @keyframes rotate {
-          0% { transform: rotateZ(0deg); scale: 3; }
-          20%{   }
-          100% { transform: rotateZ(360deg);  }
-        }
-
-
-        
-    .item .phone .name{
-      font-family: sans-serif;
-      font-weight: bolder;
-      font-size: 45px;
-      border-bottom: 1px solid black;
-      width: 20%;
-      margin: auto;
-      
-    }
-
-    .item .phone .price{
-      font-size: 45px;
-    }
-
-    .item .phone button{
-      padding: 30px;
-      width: 160px;    
-      border: 5px;
-      background-color: rgb(4, 54, 8);
-      color: rgb(255, 255, 255);
-      font-weight: bolder;
-      cursor: pointer;
-      font-size: 35px;
-      
-    }
-
-    .item .phone button:hover{
-      background-color: rgba(54, 250, 5, 0.507);
-    }
-
-    .item svg{
-      height: 70px;
-      position: absolute;
-      padding: 20px;
-      fill: white;
-      cursor: pointer;
-    }    
-    .item svg:hover{
-      opacity: 0.7;
-    }
-
-
-    .buy-page{
-     background-color: rgb(255, 255, 255);
-     height: 400px;
-     width: 80%;
-     position: absolute;
-     margin: auto;
-     box-shadow: 0px 0px 20px 5px;
-     margin-left: 75px;
-     top: 20%;
-     text-align: center;
-     padding: 20px;
-     font-family: sans-serif;
-     font-size: 70px;
-     border: 5px solid rgb(0, 255, 0);
-     border-radius: 10px;
-     animation: buyanimation 0.5s linear;
-     display: none;
-    }
-
-    @keyframes buyanimation {
-      0%{
-        opacity: 0.3;
-        top: -800px;
-      }
-      100%{
-        opacity: 1;
-        top: -800px;
-      }
-    }
-
-
-
-    .ins-buy-page p{
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    .ins-buy-page button{
-      padding: 20px;
-      width: 190px;
-      border: none;
-      background-color: rgb(14, 148, 66);
-      font-weight: bolder;
-      color: white;
-      cursor: pointer;
-      font-size: 50px;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-
-
-    .ins-buy-page .yes:hover{
-        background-color: greenyellow;
-        color: black;
-    }
-
-    .ins-buy-page .no:hover{
-      background-color: red;
-      color: black;
-    }
-
-
-
-
-
-    .buy-result{
-    background-color: rgb(255, 255, 255);
-     height: 400px;
-     position: absolute;
-     width: 80%;
-     margin: auto;
-     box-shadow: 0px 0px 20px 5px;
-     text-align: center;
-     padding: 20px;
-     font-family: sans-serif;
-     font-size: 50px;
-     font-weight: bold;
-     border: 5px solid rgb(0, 255, 0);
-     border-radius: 10px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     display: none;
-     top: 20%;
-     left: 8%;
-    }
-
-    .buy-result .animation-buy-result{
-      height: 120px;
-      width: 120px;
-      background-color: rgb(56, 4, 4);
-      border-radius: 100%;
-      box-shadow: 0px 0px 10px 10px green;
-      animation: animationResult 2.5s linear infinite;
-      position: absolute;
-      left:55%;
-      top:40%;
-    }
-
-    @keyframes animationResult{
-      0%{
-        height: 20px;
-        width: 20px;
-        left: 4%;
-        top: 40%;
-        transform: rotate(-360deg)
-      }
-      20%{
-        height: 50px;
-        width: 50px;
-        left: 45%;
-        top: 38%;
-        transform: rotate(-180deg);
-      }
-
-      40%{
-        height: 90px;
-        width: 90px;
-        left: 45%;
-        top: 36%;
-        transform: rotate(180deg);
-      }
-      100%{
-        height: 120px;
-        width: 120px;
-        left: 45%;
-        top: 34%;
-        transform: rotate(360deg);
-      }
-    }
-
-    .buy-result .dot{
-      height: 10px;
-      width: 10px;
-      background-color: aliceblue;
-      border-radius: 100%;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    .buy-result p{
-      margin-top: 80px;
-      font-size: 70px;
-      font-weight: bolder;
-      color: green;
-     display: none;
-    }
-
-
-    }
-
-
-
-
-
-
-
-
+   /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aquamarine;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.p1 {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(41, 218, 100, 0.589);
+}
+
+.p1 .head {
+  background: url('phoneImages/ap4.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  height: 30vh;
+}
+
+.icon svg {
+  height: 30px;
+  fill: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.icon svg:hover {
+  opacity: 0.8;
+}
+
+.p1 h2 {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top: 25%;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 3px solid rgb(0, 255, 55);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bolder;
+  animation: welcoming 1s linear;
+}
+
+@keyframes welcoming {
+  0% {
+    padding: 0;
+    top: 10px;
+    opacity: 0.3;
+  }
+  50% {
+    padding: 10px;
+  }
+  100% {
+    padding: 15px;
+  }
+}
+
+.p1 .intro-pra {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16%;
+}
+
+.p1 .intro-pra-line {
+  background-color: rgb(0, 255, 21);
+  height: 4px;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.p1 .phones .line-of-intro-phones {
+  background-color: rgb(41, 129, 41);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 30px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.p1 .phones .line-of-intro-phones li {
+  list-style: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.p1 .phones .line-of-intro-phones li:hover {
+  background-color: rgb(21, 172, 78);
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.phones {
+  height: auto;
+  background-color: aquamarine;
+}
+
+.each-phones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.phone {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(0, 255, 157, 0.623);
+  box-shadow: 0px 0px 12px 1px rgb(24, 29, 24);
+  border-radius: 5px;
+}
+
+.each-phones img {
+  height: 80px;
+  border-radius: 10px;
+  width: 80px;
+}
+
+.each-phones .name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+
+.each-phones .price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.each-phones button {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(11, 165, 11);
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.each-phones button:hover {
+  background-color: green;
+}
+
+/* Item Page Styles */
+.item-page {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: chocolate;
+  display: none;
+  overflow: hidden;
+}
+
+.item-main {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  border-top: 2px solid black;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.877);
+}
+
+.item-main .each-phones {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.item-main .each-phones .phone {
+  background-color: rgb(0, 45, 245);
+  box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+}
+
+.item-main .each-phones .phone img {
+  width: 80px;
+  height: 80px;
+}
+
+.item-main .each-phones .phone .name,
+.item-main .each-phones .phone .price {
+  font-size: 20px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.item-main .each-phones .phone button {
+  padding: 20px;
+  font-size: 15px;
+  padding: 0px;
+  text-align: center;
+}
+
+.item {
+  width: 100%;
+  background: linear-gradient(to top, rgb(8, 235, 46), blue);
+  box-shadow: 0px 0px 10px 0px black;
+  overflow: hidden;
+  height: 40%;
+}
+
+.item .phone {
+  text-align: center;
+  width: 80%;
+  height: 160px;
+  background: url(./phoneImages/ap4.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(0, 255, 106);
+  margin-top: 20px;
+  box-shadow: 0px 0px 12px 1px white;
+  border-radius: 20px;
+}
+
+.item .phone img {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgb(4, 250, 4);
+  animation: rotate 0.5s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+    scale: 3;
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.item .phone .name {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+  border-bottom: 1px solid black;
+  width: 20%;
+  margin: auto;
+}
+
+.item .phone .price {
+  font-size: 15px;
+}
+
+.item .phone button {
+  padding: 10px;
+  width: 120px;
+  border: 5px;
+  background-color: rgb(4, 54, 8);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.item .phone button:hover {
+  background-color: rgba(54, 250, 5, 0.507);
+}
+
+.item svg {
+  height: 30px;
+  position: absolute;
+  padding: 10px;
+  fill: white;
+  cursor: pointer;
+}
+
+.item svg:hover {
+  opacity: 0.7;
+}
+
+/* Buy Page Styles */
+.buy-page {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 80%;
+  position: absolute;
+  margin: auto;
+  box-shadow: 0px 0px 20px 5px;
+  margin-left: 10px;
+  top: 20%;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: 5px solid rgb(0, 255, 0);
+  border-radius: 10px;
+  animation: buyanimation 0.5s linear;
+  display: none;
+}
+
+@keyframes buyanimation {
+  0% {
+    opacity: 0.3;
+    top: -300px;
+  }
+  100% {
+    opacity: 1;
+    top: -400px;
+  }
+}
+
+.ins-buy-page p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.ins-buy-page button {
+  padding: 8px;
+  width: 70px;
+  border: none;
+  background-color: rgb(14, 148, 66);
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.ins-buy-page .yes:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+.ins-buy-page .no:hover {
+  background-color: red;
+  color: black;
+}
+
+/* Buy Result Styles */
+.buy-result {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0px 0px 20px 5px;
+  top: 10px;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  border: 5px solid rgb(0, 255, 0);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  top: 20%;
+  left: 2%;
+}
+
+.buy-result .animation-buy-result {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(56, 4, 4);
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px 10px green;
+  animation: animationResult 2.5s linear infinite;
+  position: absolute;
+  left: 47%;
+  top: 40%;
+}
+
+@keyframes animationResult {
+  0% {
+    height: 20px;
+    width: 20px;
+    left: 44%;
+    top: 40%;
+    transform: rotate(-360deg);
+  }
+  20% {
+    height: 40px;
+    width: 40px;
+    left: 42%;
+    top: 38%;
+    transform: rotate(-180deg);
+  }
+  40% {
+    height: 60px;
+    width: 60px;
+    left: 40%;
+    top: 36%;
+    transform: rotate(180deg);
+  }
+  100% {
+    height: 80px;
+    width: 80px;
+    left: 38%;
+    top: 34%;
+    transform: rotate(360deg);
+  }
+}
+
+.buy-result .dot {
+  height: 10px;
+  width: 10px;
+  background-color: aliceblue;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.buy-result p {
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: green;
+  display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .p1 h2 {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .p1 .intro-pra {
+    font-size: 14px;
+  }
+
+  .each-phones {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .each-phones img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .each-phones .name,
+  .each-phones .price {
+    font-size: 14px;
+  }
+
+  .each-phones button {
+    height: 35px;
+    width: 90px;
+    font-size: 14px;
+  }
+
+  .item-main .each-phones .phone {
+    height: 150px;
+  }
+
+  .item-main .each-phones .phone img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item-main .each-phones .phone .name,
+  .item-main .each-phones .phone .price {
+    font-size: 16px;
+  }
+
+  .item .phone {
+    height: 120px;
+  }
+
+  .item .phone img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .item .phone .name,
+  .item .phone .price {
+    font-size: 14px;
+  }
+
+  .item .phone button {
+    padding: 8px;
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .buy-page {
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .ins-buy-page button {
+    padding: 6px;
+    width: 60px;
+    font-size: 14px;
+  }
+
+  .buy-result {
+    height: 80px;
+    font-size: 14px;
+  }
+
+  .buy-result .animation-buy-result {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p1 h2 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .p1 .intro-pra {
+    font-size: 12px;
+  }
+
+  .each-phones {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .each-phones img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .each-phones .name,
+  .each-phones .price {
+    font-size: 12px;
+  }
+
+  .each-phones button {
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+  }
+
+  .item-main .each-phones .phone {
+    height: 120px;
+  }
+
+  .item-main .each-phones .phone img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-main .each-phones .phone .name,
+  .item-main .each-phones .phone .price {
+    font-size: 14px;
+  }
+
+  .item .phone {
+    height: 100px;
+  }
+
+  .item .phone img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .item .phone .name,
+  .item .phone .price {
+    font-size: 12px;
+  }
+
+  .item .phone button {
+    padding: 6px;
+    width: 80px;
+    font-size: 12px;
+  }
+
+  .buy-page {
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .ins-buy-page button {
+    padding: 4px;
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .buy-result {
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .buy-result .animation-buy-result {
+    height: 40px;
+    width: 40px;
+  }
+}
 
 
 
